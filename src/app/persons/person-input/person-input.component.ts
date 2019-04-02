@@ -6,14 +6,15 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./person-input.component.css']
 })
 export class PersonInputComponent implements OnInit {
-
+  enteredPersonName = '';
   constructor() {
   }
 
   ngOnInit() {
   }
 
-  onCreatePerson(personName: string) {
-    console.log('Created a Person ' + personName);
+  onCreatePerson() {
+    console.log('Created a Person ' + this.enteredPersonName);
+    this.enteredPersonName = '';
   }
 }
