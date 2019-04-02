@@ -13,4 +13,7 @@ export class PersonInputComponent implements OnInit {
   ngOnInit() {
   }
 
+  onCreatePerson() {
+    console.log('Created a Person');
+  }
 }
