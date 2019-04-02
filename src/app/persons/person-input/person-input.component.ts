@@ -6,7 +6,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./person-input.component.css']
 })
 export class PersonInputComponent implements OnInit {
-  @Output personCreate = new EventEmitter<string>();
+  @Output() personCreate = new EventEmitter<string>();
   enteredPersonName = '';
   constructor() {
   }
