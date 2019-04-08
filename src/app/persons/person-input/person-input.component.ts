@@ -17,7 +17,7 @@ export class PersonInputComponent implements OnInit {
 
   onCreatePerson() {
     console.log('Created a Person ' + this.enteredPersonName);
-    this.personService.addPersob(this.enteredPersonName);
+    this.personService.addPerson(this.enteredPersonName);
     this.enteredPersonName = '';
   }
 }
