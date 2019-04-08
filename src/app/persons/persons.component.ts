@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {PersonsService} from './persons.service';
 
 @Component({
   selector: 'app-persons',
@@ -6,9 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./persons.component.css']
 })
 export class PersonsComponent implements OnInit {
-  @Input() personList: string[];
+  personList: string[];
 
-  constructor() {
+  constructor(prsService: PersonsService) {
+    this.personList = prsService.persons;
   }
 
   ngOnInit() {
