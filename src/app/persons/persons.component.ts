@@ -9,12 +9,10 @@ import {PersonsService} from './persons.service';
 export class PersonsComponent implements OnInit {
   personList: string[];
 
-  constructor(prsService: PersonsService) {
-    this.personList = prsService.persons;
+  constructor(private prsService: PersonsService) {
   }
 
   ngOnInit() {
+    this.personList = this.prsService.persons;
   }
-
-
 }
