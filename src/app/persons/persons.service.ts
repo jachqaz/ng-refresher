@@ -11,5 +11,6 @@ export class PersonsService {
 
   addPersob(name: string) {
     this.persons.push(name);
+    console.log(this.persons);
   }
 }
